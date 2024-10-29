@@ -1,0 +1,15 @@
+<div class="w-full p-2">
+  <div class="flex justify-center text-green-700 text-2xl">Our Features</div>
+  <div class="text-2xl font-bold">
+    <div class="flex justify-center">Better Digital Insurance Begins</div>
+    <div class="flex justify-center">Right Here</div>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-1 mt-3">
+    @for(card of cardData; track card.id){
+    <div class="p-1">
+      <app-card [heading]="card.heading" [subheading]="card.subheading" />
+    </div>
+    }
+  </div>
+</div>
