@@ -1,0 +1,41 @@
+<div class="w-full p-3 pt-5">
+  <div class="flex gap-4 justify-around">
+    <div class="flex p-1">
+      <div class="px-2 text-green-700 font-bold text-xl">LOGO</div>
+      <div class="ml-5">
+        <input
+          class="border-b-2 border-gray-600 text-gray-600"
+          title="Search Here"
+          alt="Search Here"
+          value="Search Here"
+        />
+      </div>
+    </div>
+
+    @if(!isMenuOpen) {
+    <div class="p-1 hidden lg:flex">
+      <div class="hover:text-green-600 px-2">Home</div>
+      <div class="hover:text-green-600 px-2">Pages</div>
+      <div class="hover:text-green-600 px-2">Insurances</div>
+      <div class="hover:text-green-600 px-2">Blog</div>
+      <div class="hover:text-green-600 px-2">Contact Us</div>
+    </div>
+    }
+
+    <div class="gap-2 p-1 md:flex hidden">
+      <div>📞 +(11)65 458 856</div>
+      <div>
+        <button class="px-2 p-1 bg-green-500 rounded-sm hover:bg-green-700">
+          Get Quote
+        </button>
+      </div>
+    </div>
+
+    <div class="lg:hidden">
+      <button class="rounded text-3xl" (click)="openDialog()">≡</button>
+    </div>
+  </div>
+</div>
+@if(isMenuOpen){
+<app-menu />
+}
